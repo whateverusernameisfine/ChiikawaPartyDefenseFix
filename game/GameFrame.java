@@ -13,7 +13,7 @@ public class GameFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
-        setContentPane(new HomeScreenPanel(this)); // Show home screen first
+        setContentPane(new LoginPanel(this)); // Show home screen first
         setVisible(true);
     }
 
@@ -50,10 +50,10 @@ public class GameFrame extends JFrame {
             // Recalculate totalScore from all high scores
             totalScore = highScores.values().stream().mapToInt(Integer::intValue).sum();
 
-            System.out.println("🆙 New high score for map " + mapId + ": " + newScore);
-            System.out.println("⭐ Total score recalculated: " + totalScore);
+            System.out.println("New high score for map " + mapId + ": " + newScore);
+            System.out.println("Total score recalculated: " + totalScore);
         } else {
-            System.out.println("⬇️ Score " + newScore + " did not beat previous high: " + previousHigh);
+            System.out.println("Score " + newScore + " did not beat previous high: " + previousHigh);
         }
     }
 
