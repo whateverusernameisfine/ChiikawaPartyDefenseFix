@@ -21,7 +21,6 @@ public class LoginPanel extends JPanel {
         setBackground(Color.DARK_GRAY);
 
         // Dummy users
-        userDatabase.put("player1", "1234");
         userDatabase.put("admin", "admin");
 
         JLabel title = new JLabel("Login to Play");
